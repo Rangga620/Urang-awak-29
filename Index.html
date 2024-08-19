@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urang Awak - Halaman Utama</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <header>
+        <h1>Selamat Datang di Urang Awak!</h1>
+        <p>Aplikasi belanja online terbaik untuk kebutuhan Anda.</p>
+      </header>
+
+      <div class="signup-container">
+        <h2>Masuk atau Buat Akun</h2>
+        <form class="signup-form" onsubmit="return handleLogin(event)">
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Masukkan email Anda"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Masukkan password Anda"
+              required
+            />
+          </div>
+          <button type="submit">Masuk</button>
+        </form>
+        <p class="signup-message">
+          Belum punya akun?
+          <a href="#" onclick="toggleSignupForm()">Buat akun baru</a>
+        </p>
+      </div>
+
+      <div class="signup-new-container" style="display: none">
+        <h2>Buat Akun Baru</h2>
+        <form class="signup-new-form" onsubmit="return handleSignup(event)">
+          <div class="form-group">
+            <label for="full-name">Nama Lengkap:</label>
+            <input
+              type="text"
+              id="full-name"
+              name="full-name"
+              placeholder="Masukkan nama lengkap Anda"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="nickname">Nama Panggilan:</label>
+            <input
+              type="text"
+              id="nickname"
+              name="nickname"
+              placeholder="Masukkan nama panggilan Anda"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="new-email">Email:</label>
+            <input
+              type="email"
+              id="new-email"
+              name="new-email"
+              placeholder="Masukkan email baru Anda"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="new-password">Password:</label>
+            <input
+              type="password"
+              id="new-password"
+              name="new-password"
+              placeholder="Masukkan password baru Anda"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="confirm-password">Konfirmasi Password:</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              placeholder="Konfirmasi password Anda"
+              required
+            />
+          </div>
+          <button type="submit">Buat Akun</button>
+        </form>
+        <p class="signup-message">
+          Sudah punya akun?
+          <a href="#" onclick="toggleSignupForm()">Masuk di sini</a>
+        </p>
+      </div>
+    </div>
+
+    <script src="JavaScript.js"></script>
+  </body>
+</html>

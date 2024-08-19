@@ -1,0 +1,106 @@
+/* General Styling */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #1e1e1e; /* Warna hitam gelap */
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #b71c1c; /* Warna merah elegan */
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffd700; /* Warna emas */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+.navbar ul li {
+  margin-left: 30px;
+  position: relative; /* Perlu untuk positioning dropdown */
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #ffd700; /* Warna emas */
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #ffeb3b; /* Warna emas cerah saat hover */
+}
+
+/* Dropdown menu */
+.dropdown {
+  display: none; /* Sembunyikan dropdown secara default */
+  position: absolute;
+  background-color: #333; /* Warna hitam gelap */
+  padding: 10px;
+  list-style: none;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown li {
+  margin-bottom: 10px;
+}
+
+.dropdown li a {
+  color: #ffd700;
+  display: block;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown li a:hover {
+  background-color: #444; /* Sedikit lebih terang saat hover */
+}
+
+/* Tampilkan dropdown saat hover */
+.navbar ul li:hover > .dropdown {
+  display: block;
+}
+
+/* Menghilangkan dropdown saat kursor tidak di elemen 'li' */
+.navbar ul li:not(:hover) > .dropdown {
+  display: none;
+}
+
+/* Shopping Container */
+.shopping-container {
+  margin-top: 100px;
+  padding: 20px;
+  text-align: center;
+}
+
+.shopping-container h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #ffd700; /* Warna emas */
+}
+
+.shopping-container p {
+  font-size: 18px;
+  color: #ddd;
+}

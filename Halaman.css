@@ -1,0 +1,195 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  background-color: #0e0e0e; /* Dark black background */
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .logo {
+  color: #ffd700;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar ul li {
+  position: relative;
+  margin-left: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #ffd700;
+  padding: 10px 15px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gold Glow Effect only around the text */
+.navbar ul li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: rgba(255, 215, 0, 0.4); /* Subtle Gold glow */
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover:before {
+  left: 0;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  list-style: none;
+  padding: 10px 0;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  z-index: 1000; /* Ensure dropdown is above other content */
+}
+
+.dropdown li {
+  padding: 0;
+}
+
+.dropdown li a {
+  color: #ffd700;
+  padding: 10px 20px;
+  display: block;
+  text-align: left;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Glow effect on hover */
+.dropdown li a:hover {
+  background-color: #444;
+  box-shadow: 0 0 15px 5px rgba(128, 0, 128, 0.7); /* Purple glow effect */
+}
+
+/* Show and Hide Dropdown */
+.shopping-menu:hover .dropdown {
+  display: block;
+}
+
+.navbar ul li.shopping-menu:hover > .dropdown {
+  display: block;
+}
+
+/* Hide dropdown when not hovering */
+.navbar ul li.shopping-menu:not(:hover) .dropdown {
+  display: none;
+}
+
+/* Video Background */
+.video-background video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  filter: brightness(0.3); /* Adjusts brightness for better contrast */
+}
+
+/* Main Content - Centered */
+.main-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  color: #ffd700; /* Gold color for main content text */
+}
+
+.main-content h1 {
+  font-size: 58px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #ffeb3b; /* Lighter gold for contrast */
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9); /* Black Panther-inspired text-shadow */
+}
+
+.main-content p {
+  font-size: 24px;
+  margin-bottom: 40px;
+  color: #fff;
+  text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.8);
+}
+
+.explore-button {
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: #b71c1c; /* Dark red */
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.explore-button:hover {
+  background-color: #ffd700;
+  color: #333;
+  transform: scale(1.05);
+}
+
+/* Footer Styles */
+.footer {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  text-align: center;
+  color: #ffd700;
+  font-size: 16px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.footer p {
+  margin: 0;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(255, 215, 0, 0.7);
+}
